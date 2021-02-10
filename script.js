@@ -28,7 +28,7 @@ allLi.forEach(addListenerToLi);//add the listener to all default li items
 
 function addListenerToLi(item){
 	item.addEventListener("click", toggleDone);
-	item.addEventListener("contextmenu",removeItem);
+	item.addEventListener("dblclick",removeItem);
 }
 
 function inputLength() {

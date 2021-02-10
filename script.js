@@ -1,10 +1,34 @@
+/*Set background*/
+var color1 = document.querySelector(".color1");
+var color2 = document.querySelector(".color2");
+var body = document.getElementById("gradient");
+
+color1.addEventListener("input",setGradient);
+color2.addEventListener("input",setGradient);
+
+function setGradient(){
+	body.style.background = 
+		"linear-gradient(to right, "
+		+color1.value
+		+", "
+		+color2.value
+		+")";
+}
+
+/* add, done/undone, delete item*/
+
 var button = document.getElementById("enter");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
 var allLi = document.querySelectorAll("li");
 
+button.addEventListener("click", addListAfterClick);
+input.addEventListener("keypress", addListAfterKeypress);
+allLi.forEach(addListenerToLi);//add the listener to all default li items 
+
 function addListenerToLi(item){
 	item.addEventListener("click", toggleDone);
+	item.addEventListener("contextmenu",removeItem);
 }
 
 function inputLength() {
@@ -14,7 +38,7 @@ function inputLength() {
 function createListElement() {
 	var li = document.createElement("li");
 	li.appendChild(document.createTextNode(input.value));
-	li.addEventListener("click", toggleDone);
+	addListenerToLi(li);
 	ul.appendChild(li);
 	input.value = "";
 }
@@ -35,6 +59,11 @@ function toggleDone(item){
 	 item.target.classList.toggle("done");
 }
 
-button.addEventListener("click", addListAfterClick);
-input.addEventListener("keypress", addListAfterKeypress);
-allLi.forEach(addListenerToLi);
+function removeItem(item){
+	ul.removeChild(item.target);
+}
+
+
+
+
+

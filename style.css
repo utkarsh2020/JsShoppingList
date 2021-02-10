@@ -1,25 +1,26 @@
-.coolTitle {
-  text-align: center;
+body{
   font-family: 'Oswald', Helvetica, sans-serif;
-  font-size: 40px;
-  transform: skewY(-10deg);
-  letter-spacing: 4px;
-  word-spacing: -8px;
-  color: tomato;
+  background: linear-gradient(to right, #3eb3d0, #af73b0);
+}
+.coolTitle {  
+  text-transform: uppercase;
+  text-align: center;
   text-shadow: 
-    -1px -1px 0 firebrick,
-    -2px -2px 0 firebrick,
-    -3px -3px 0 firebrick,
-    -4px -4px 0 firebrick,
-    -5px -5px 0 firebrick,
-    -6px -6px 0 firebrick,
-    -7px -7px 0 firebrick,
-    -8px -8px 0 firebrick,
     -30px 20px 40px dimgrey;
+  color:rgba(0,0,0,0.5);
+  font-size: 40px;
+}
+
+#first{
+  font-size: 20px;
 }
 
 li{
-  cursor:grab;
+  cursor:grab; 
+  font-size: 20px;
+  color:rgba(0,0,0,0.9);
+  text-shadow: 
+    -30px 20px 40px dimgrey;
 }
 
 .done {

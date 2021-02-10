@@ -4,9 +4,17 @@
 	<title>Javascript + DOM</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-	<h1>Shopping List</h1>
-	<p id="first">Get it done today</p>
+<body id="gradient">
+	<div class="coolTitle">
+		<h1>Shopping List</h1>
+		<p>Get it done today</p>
+		<hr>		
+		<p id="first">Chooose your background colors: 	
+			<input class="color1" type="color" value="#3eb3d0">
+			<input class="color2" type="color" value="#af73b0">
+		</p>	
+		<hr>
+	</div>
 	<input id="userinput" type="text" placeholder="enter items">
 	<button id="enter">Enter</button>
 	<ul>
@@ -17,6 +25,7 @@
 		<li>Birthday Cake</li>
 		<li>Candles</li>
 	</ul>
+	<footer>Click on an item to set done/undone. Right click to delete.</footer>
 	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
